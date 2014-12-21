@@ -21,7 +21,7 @@ public class WelcomeController {
 		return mv;
 	}
 	
-	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
+	/*@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView welcomePage() {
  
 		ModelAndView model = new ModelAndView();
@@ -30,7 +30,7 @@ public class WelcomeController {
 		model.setViewName("hello");
 		return model;
  
-	}
+	}*/
  
 	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
 	public ModelAndView adminPage() {
@@ -43,4 +43,5 @@ public class WelcomeController {
 		return model;
  
 	}
+	
 }
