@@ -18,6 +18,7 @@ public class SpringContentController {
 	public @ResponseBody
 	UserDetails getUser() {
 		UserDetails userDetails = new UserDetails();
+		userDetails.setId(501);
 		userDetails.setUserName("Shishir Jain");
 		userDetails.setEmailId("jainshi@gmail.com");
 		return userDetails;

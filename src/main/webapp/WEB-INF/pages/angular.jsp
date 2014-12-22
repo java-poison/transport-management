@@ -15,8 +15,9 @@
 	<body>
 		<div ng-controller="Hello">
 			<h2>Spring MVC + AngularJS Demo</h2>
-			<p>EMail Id : {{user.emailId}}</p>
+			<p>User Id : {{user.id}} </p>
 			<p>User Name : {{user.userName}}</p>
+			<p>EMail Id : {{user.emailId}}</p>
 		</div>
 	</body>
 </html>
