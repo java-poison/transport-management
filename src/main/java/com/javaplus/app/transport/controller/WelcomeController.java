@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class WelcomeController {
 	String message = "Welcome to Spring MVC!";
 
-	@RequestMapping("/hello")
+	/*@RequestMapping("/hello")
 	public ModelAndView showMessage(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
 		System.out.println("in controller");
@@ -19,9 +19,9 @@ public class WelcomeController {
 		mv.addObject("message", message);
 		mv.addObject("name", name);
 		return mv;
-	}
+	}*/
 	
-	/*@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
+	@RequestMapping(value = {"/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView welcomePage() {
  
 		ModelAndView model = new ModelAndView();
@@ -30,16 +30,16 @@ public class WelcomeController {
 		model.setViewName("hello");
 		return model;
  
-	}*/
+	}
  
-	@RequestMapping(value = "/admin**", method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/admin**"}, method = RequestMethod.GET)
 	public ModelAndView adminPage() {
  
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Spring Security Hello World");
 		model.addObject("message", "This is protected page!");
-		model.setViewName("admin");
- 
+		//model.setViewName("admin");
+		model.setViewName("angular");
 		return model;
  
 	}
